@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}
+  Profile of {{profile.fullname}}
+{% endblock title %}
+{% block body %}
+<div class="d-flex justify-content-between align-items-center">
+    <table class="table table-bordered">
+        <thead>
+            <th colspan="2">Personal Info</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Username</td>
+                <td>{{profile.username}}</td>
+            </tr>
+            <tr>
+                <td>Full Name</td>
+                <td>{{profile.fullname}}</td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>{{user.email}}</td>
+            </tr>
+            <tr>
+                <td>Contact Address</td>
+                <td>{{profile.address_1}}</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>{{profile.phone}}</td>
+            </tr>
+            <tr>
+                <td>Zipcode</td>
+                <td>{{profile.zipcode}}</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>{{profile.city}}</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>{{profile.country}}</td>
+            </tr>
+        </tbody>
+    </table> 
+    </div>
+    <a href="{% url 'AppLogin:editprofile' %}" class="btn btn-primary">Edit your profile!</a>
+{% endblock body %}
